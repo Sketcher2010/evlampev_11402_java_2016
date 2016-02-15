@@ -1,0 +1,6 @@
+2016-02-15 23:13:55 INFO  ItemsDaoFileBasedImpl:18 - Start parsing.
+2016-02-15 23:13:55 INFO  ItemsDaoFileBasedImpl:26 - Item item1 has been added with price 123.0.
+2016-02-15 23:13:55 INFO  ItemsDaoFileBasedImpl:26 - Item item2 has been added with price 321.0.
+2016-02-15 23:13:55 INFO  ItemsDaoFileBasedImpl:26 - Item item3 has been added with price 42.0.
+2016-02-15 23:13:55 INFO  ItemsDaoFileBasedImpl:28 - Finish parsing.
+2016-02-15 23:13:55 INFO  ItemsDaoFileBasedImpl:35 - Item item1 has been deleted.

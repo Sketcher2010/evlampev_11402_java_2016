@@ -1,5 +1,6 @@
 package store.dao;
 
+import org.apache.log4j.Logger;
 import store.dao.models.Item;
 
 import java.io.BufferedReader;
@@ -11,8 +12,10 @@ public class ItemsDaoFileBasedImpl implements ItemsDao{
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
+    Logger log = Logger.getLogger("ItemsDaoFileBasedImpl");
 
     public ItemsDaoFileBasedImpl(String filePath) throws IOException {
+        log.info("Start parsing.");
         items = new ArrayList<>();
         bufferedReader = new BufferedReader(new FileReader(filePath));
         String line;
@@ -20,13 +23,19 @@ public class ItemsDaoFileBasedImpl implements ItemsDao{
             String itemName = line;
             double price = Double.parseDouble(bufferedReader.readLine());
             items.add(new Item(itemName, price));
+            log.info("Item "+itemName+" has been added with price "+price+".");
         }
+        log.info("Finish parsing.");
     }
 
     public void delete(String itemName) {
         Item item = this.select(itemName);
-        if (item != null)
+        if (item != null) {
             items.remove(item);
+            log.info("Item "+itemName+" has been deleted.");
+        } else {
+            log.info("Nothing has been deleted.");
+        }
     }
 
     public Item select(String itemName) {
