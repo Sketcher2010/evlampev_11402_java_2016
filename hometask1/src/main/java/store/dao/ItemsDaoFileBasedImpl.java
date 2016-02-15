@@ -18,21 +18,22 @@ public class ItemsDaoFileBasedImpl implements ItemsDao{
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             String itemName = line;
-            items.add(new Item(itemName));
+            double price = Double.parseDouble(bufferedReader.readLine());
+            items.add(new Item(itemName, price));
         }
     }
 
     public void delete(String itemName) {
-        items.remove(new Item(itemName)); //overridden equals() in Item class doesn't affect the amount field
+        Item item = this.select(itemName);
+        if (item != null)
+            items.remove(item);
     }
 
     public Item select(String itemName) {
-        int i;
-        if ((i = items.indexOf(new Item(itemName))) == -1) {
-            return null;
-        }else{
-            return items.get(i);
-
+        for (Item itmeit: items) {
+            if (itmeit.getName().equals(itemName))
+                return itmeit;
         }
+        return null;
     }
 }
