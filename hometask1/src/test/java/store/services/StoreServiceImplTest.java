@@ -41,6 +41,7 @@ class StoreServiceImplTest {
     @Test
     public void testIsExist() {
         assertTrue(testedStoreService.isExist("Tovar"));
+
         verify(itemsDao).select("Tovar");
     }
 
