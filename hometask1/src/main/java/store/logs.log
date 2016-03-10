@@ -1,8 +1,0 @@
-2016-03-02 22:49:04 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@79f9805f: startup date [Wed Mar 02 22:49:04 MSK 2016]; root of context hierarchy
-2016-03-02 22:49:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
-2016-03-02 22:49:05 INFO  ItemsDaoCSVFileBasedImpl:19 - start parsing
-2016-03-02 22:49:05 INFO  ItemsDaoCSVFileBasedImpl:26 - Item item1 has been added with price 123.0.
-2016-03-02 22:49:05 INFO  ItemsDaoCSVFileBasedImpl:26 - Item item2 has been added with price 321.0.
-2016-03-02 22:49:05 INFO  ItemsDaoCSVFileBasedImpl:26 - Item item3 has been added with price 42.0.
-2016-03-02 22:49:05 INFO  ItemsDaoCSVFileBasedImpl:28 - Finish parsing.
-2016-03-02 22:49:05 INFO  ItemsDaoCSVFileBasedImpl:36 - Item item1 has been deleted.

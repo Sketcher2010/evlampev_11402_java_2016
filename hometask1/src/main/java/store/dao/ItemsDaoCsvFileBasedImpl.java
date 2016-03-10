@@ -9,13 +9,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class ItemsDaoCSVFileBasedImpl implements ItemsDao {
+public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
     Logger log = Logger.getLogger("ItemsDaoCSVFileBasedImpl");
 
-    public ItemsDaoCSVFileBasedImpl(String filePath) throws IOException {
+    public ItemsDaoCsvFileBasedImpl(String filePath) throws IOException {
         log.info("start parsing");
         items = new ArrayList<>();
         bufferedReader = new BufferedReader(new FileReader(filePath));
