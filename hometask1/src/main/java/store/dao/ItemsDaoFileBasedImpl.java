@@ -13,6 +13,7 @@ public class ItemsDaoFileBasedImpl implements ItemsDao{
     BufferedReader bufferedReader;
     ArrayList<Item> items;
     Logger log = Logger.getLogger("ItemsDaoFileBasedImpl");
+    String filepath;
 
     public ItemsDaoFileBasedImpl(String filePath) throws IOException {
         log.info("Start parsing.");
@@ -44,5 +45,10 @@ public class ItemsDaoFileBasedImpl implements ItemsDao{
                 return itmeit;
         }
         return null;
+    }
+
+    @Override
+    public void setFilePath(String filePath) {
+        this.filepath = filePath;
     }
 }

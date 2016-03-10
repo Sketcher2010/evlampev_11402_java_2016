@@ -17,4 +17,6 @@ public interface ItemsDao {
      * @return
      */
     Item select(String itemName);
+
+    void setFilePath(String filePath);
 }

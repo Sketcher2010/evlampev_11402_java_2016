@@ -4,12 +4,12 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="parser"
-          class="store.dao.ItemsDaoCSVFileBasedImpl">
-        <constructor-arg value="/home/sketcher2010/reps/java/hometask1/src/main/java/store/in.csv"/>
+    <bean id="ItemsDao"
+          class="store.dao.ItemsDaoCsvFileBasedImpl">
+        <constructor-arg value="/home/sketcher2010/reps/java/hometask1/src/main/resources/in.csv"/>
     </bean>
-    <bean id="buy"
+    <bean id="Services"
           class="store.services.StoreServiceImpl">
-        <constructor-arg ref="parser"/>
+        <constructor-arg ref="ItemsDao"/>
     </bean>
 </beans>

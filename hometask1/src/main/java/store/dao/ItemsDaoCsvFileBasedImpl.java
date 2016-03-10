@@ -14,6 +14,7 @@ public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
     BufferedReader bufferedReader;
     ArrayList<Item> items;
     Logger log = Logger.getLogger("ItemsDaoCSVFileBasedImpl");
+    String filePath;
 
     public ItemsDaoCsvFileBasedImpl(String filePath) throws IOException {
         log.info("start parsing");
@@ -46,5 +47,9 @@ public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
                 return itmeit;
         }
         return null;
+    }
+    @Override
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 }
