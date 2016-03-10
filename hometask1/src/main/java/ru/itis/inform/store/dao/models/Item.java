@@ -1,4 +1,4 @@
-package store.dao.models;
+package ru.itis.inform.store.dao.models;
 
 import com.google.common.base.MoreObjects;
 

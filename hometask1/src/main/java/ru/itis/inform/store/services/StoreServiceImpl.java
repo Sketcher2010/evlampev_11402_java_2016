@@ -1,11 +1,10 @@
-package store.services;
+package ru.itis.inform.store.services;
 
-import store.dao.ItemsDao;
+import ru.itis.inform.store.dao.ItemsDao;
 
 public class StoreServiceImpl implements StoreService {
 
     ItemsDao itemsDao;
-
 
     public StoreServiceImpl(ItemsDao itemsDao) {
         this.itemsDao = itemsDao;

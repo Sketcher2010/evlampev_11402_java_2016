@@ -5,11 +5,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="ItemsDao"
-          class="store.dao.ItemsDaoCsvFileBasedImpl">
+          class="ru.itis.inform.store.dao.ItemsDaoCsvFileBasedImpl">
         <constructor-arg value="/home/sketcher2010/reps/java/hometask1/src/main/resources/in.csv"/>
     </bean>
     <bean id="Services"
-          class="store.services.StoreServiceImpl">
+          class="ru.itis.inform.store.services.StoreServiceImpl">
         <constructor-arg ref="ItemsDao"/>
     </bean>
 </beans>

@@ -1,4 +1,4 @@
-package store.services;
+package ru.itis.inform.store.services;
 
 
 public interface StoreService {

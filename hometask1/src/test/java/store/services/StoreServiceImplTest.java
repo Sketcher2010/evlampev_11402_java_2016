@@ -5,8 +5,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import store.dao.ItemsDao;
-import store.dao.models.Item;
+import ru.itis.inform.store.dao.ItemsDao;
+import ru.itis.inform.store.dao.models.Item;
+import ru.itis.inform.store.services.StoreServiceImpl;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.anyString;

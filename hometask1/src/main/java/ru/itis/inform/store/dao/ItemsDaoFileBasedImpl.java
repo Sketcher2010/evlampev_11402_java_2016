@@ -1,7 +1,7 @@
-package store.dao;
+package ru.itis.inform.store.dao;
 
 import org.apache.log4j.Logger;
-import store.dao.models.Item;
+import ru.itis.inform.store.dao.models.Item;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

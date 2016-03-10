@@ -1,7 +1,7 @@
-package store.dao;
+package ru.itis.inform.store.dao;
 
 import org.apache.log4j.Logger;
-import store.dao.models.Item;
+import ru.itis.inform.store.dao.models.Item;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,20 +9,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
+public class ItemsDaoTSVFileBasedImpl implements ItemsDao {
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
     Logger log = Logger.getLogger("ItemsDaoCSVFileBasedImpl");
-    String filePath;
+    String filepath;
 
-    public ItemsDaoCsvFileBasedImpl(String filePath) throws IOException {
+    public ItemsDaoTSVFileBasedImpl(String filePath) throws IOException {
         log.info("start parsing");
         items = new ArrayList<>();
         bufferedReader = new BufferedReader(new FileReader(filePath));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            String[] itemBody = line.split(",");
+            String[] itemBody = line.split("\\t");
             items.add(new Item(itemBody[0], Double.parseDouble(itemBody[1])));
             log.info("Item "+itemBody[0]+" has been added with price "+Double.parseDouble(itemBody[1])+".");
         }
@@ -48,8 +48,10 @@ public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
         }
         return null;
     }
+
     @Override
     public void setFilePath(String filePath) {
-        this.filePath = filePath;
+        this.filepath = filePath;
     }
+
 }

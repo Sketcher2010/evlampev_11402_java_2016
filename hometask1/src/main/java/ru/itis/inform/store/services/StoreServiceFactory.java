@@ -1,6 +1,6 @@
-package store.services;
+package ru.itis.inform.store.services;
 
-import store.dao.ItemsDao;
+import ru.itis.inform.store.dao.ItemsDao;
 
 import java.io.FileInputStream;
 import java.util.Properties;

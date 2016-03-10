@@ -1,7 +1,7 @@
-package store.dao;
+package ru.itis.inform.store.dao;
 
 
-import store.dao.models.Item;
+import ru.itis.inform.store.dao.models.Item;
 
 public interface ItemsDao {
 
