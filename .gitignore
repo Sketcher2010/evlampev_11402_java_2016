@@ -1,14 +1,14 @@
 .settings/
 .project
-.classpath
+*.classpath
 .springBeans
 /*/target/
 /commit.txt
 /*/logs/
 /*/wrk/
 /*/.gwt/
-.cache
-.idea/
+*.cache
+*.idea/
 *.iml
 *.log
 *.lck

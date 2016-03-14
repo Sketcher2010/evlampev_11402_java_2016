@@ -1,6 +1,8 @@
 package ru.itis.inform.store.dao;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 import ru.itis.inform.store.dao.models.Item;
 
 import java.io.BufferedReader;
@@ -8,7 +10,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+@ComponentScan("ru.itis.inform.store")
+@Component
 public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
 
     BufferedReader bufferedReader;

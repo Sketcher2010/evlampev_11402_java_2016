@@ -1,6 +1,6 @@
 package ru.itis.inform.store.services;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import ru.itis.inform.store.dao.ItemsDao;
 import ru.itis.inform.store.dao.ItemsDaoCsvFileBasedImpl;
 
@@ -8,8 +8,8 @@ import java.io.IOException;
 
 @Configuration
 public class StoreServiceConfig {
+
     @Bean
-    @Autowired
     public StoreService StoreService() throws IOException {
         return new StoreServiceImpl(this.ItemsDao());
     }
