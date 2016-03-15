@@ -1,7 +1,6 @@
 package ru.itis.inform.store.dao;
 
 import org.apache.log4j.Logger;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import ru.itis.inform.store.dao.models.Item;
 
@@ -10,16 +9,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@ComponentScan("ru.itis.inform.store")
 @Component
 public class ItemsDaoCsvFileBasedImpl implements ItemsDao {
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
     Logger log = Logger.getLogger("ItemsDaoCSVFileBasedImpl");
-    String filePath;
+    String filePath = "/home/sketcher2010/reps/java/hometask1/src/main/resources/in.csv";
 
-    public ItemsDaoCsvFileBasedImpl(String filePath) throws IOException {
+    public ItemsDaoCsvFileBasedImpl() throws IOException {
         log.info("start parsing");
         items = new ArrayList<>();
         bufferedReader = new BufferedReader(new FileReader(filePath));

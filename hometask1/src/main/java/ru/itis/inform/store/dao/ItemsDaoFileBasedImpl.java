@@ -1,7 +1,6 @@
 package ru.itis.inform.store.dao;
 
 import org.apache.log4j.Logger;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import ru.itis.inform.store.dao.models.Item;
 
@@ -10,19 +9,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@ComponentScan("ru.itis.inform.store")
 @Component
 public class ItemsDaoFileBasedImpl implements ItemsDao{
 
     BufferedReader bufferedReader;
     ArrayList<Item> items;
     Logger log = Logger.getLogger("ItemsDaoFileBasedImpl");
-    String filepath;
+    String filePath = "/home/sketcher2010/reps/java/hometask1/src/main/resources/in.txt";
 
-    public ItemsDaoFileBasedImpl(String filePath) throws IOException {
+    public ItemsDaoFileBasedImpl() throws IOException {
         log.info("Start parsing.");
         items = new ArrayList<>();
-        bufferedReader = new BufferedReader(new FileReader(filePath));
+        bufferedReader = new BufferedReader(new FileReader(this.filePath));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             String itemName = line;
@@ -53,6 +51,6 @@ public class ItemsDaoFileBasedImpl implements ItemsDao{
 
     @Override
     public void setFilePath(String filePath) {
-        this.filepath = filePath;
+        this.filePath = filePath;
     }
 }
